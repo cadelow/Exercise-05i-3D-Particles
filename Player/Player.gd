@@ -23,4 +23,5 @@ func _physics_process(_delta):
 		if $Pivot/RayCast.is_colliding():
 			var target = $Pivot/RayCast.get_collider()
 			if target.is_in_group("target"):
+				load("res://Explosion.tscn")
 				target.die()
